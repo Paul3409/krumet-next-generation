@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a141e">
+  <title>KRUMET | Next Generation</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #07111a;
+      color: #f4f9fc;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 22px 20px;
+      background: #0a141e;
+      border-bottom: 3px solid #46778b;
+      border-left: 7px solid #52c9e0;
+    }
+
+    .brand {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: #52c9e0;
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-top: 5px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 24px 16px;
+    }
+
+    .panel {
+      background: #101f2b;
+      border: 1px solid #345367;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: #9db8c7;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 38px);
+      margin: 10px 0;
+    }
+
+    .accent { color: #52c9e0; }
+
+    select {
+      width: 100%;
+      background: #0a141e;
+      color: white;
+      border: 1px solid #52c9e0;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 16px;
+      margin-top: 12px;
+    }
+
+    .map {
+      aspect-ratio: 16 / 9;
+      background:
+        radial-gradient(
+          circle at 40% 40%,
+          #183e52,
+          #08131d 70%
+        );
+      border: 1px solid #46778b;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map strong {
+      display: block;
+      color: #52c9e0;
+      font-size: clamp(22px, 5vw, 42px);
+      margin-bottom: 10px;
+    }
+
+    .map span {
+      color: #a6bbc6;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 24px;
+      background: #0a141e;
+      border-top: 3px solid #46778b;
+      color: #a6bbc6;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">KRUMET</div>
+    <div class="subtitle">NEXT GENERATION</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="eyebrow">SEASONAL FORECAST</div>
+      <h1>ECMWF / C3S</h1>
+      <p>
+        Mean Sea Level Pressure Anomaly
+        <span class="accent">| hPa</span>
+      </p>
+
+      <label for="month">Forecast month</label>
+      <select id="month">
+        <option value="OCT 2026">October 2026</option>
+        <option value="NOV 2026" selected>
+          November 2026
+        </option>
+        <option value="DEC 2026">December 2026</option>
+        <option value="JAN 2027">January 2027</option>
+        <option value="FEB 2027">February 2027</option>
+        <option value="MAR 2027">March 2027</option>
+      </select>
+    </section>
+
+    <section class="panel">
+      <div class="eyebrow">KRUMET MAP VIEWER</div>
+      <h1 id="title">NOV 2026</h1>
+
+      <div class="map">
+        <div>
+          <strong>KRUMET</strong>
+          <span>
+            NEXT GENERATION<br>
+            Weather map viewer<br>
+            Map integration coming next
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    KRUMET | NEXT GENERATION<br>
+    DATA SOURCE: COPERNICUS / C3S
+  </footer>
+
+  <script>
+    const month = document.getElementById("month");
+    const title = document.getElementById("title");
+
+    month.addEventListener("change", () => {
+      title.textContent = month.value;
+    });
+  </script>
+</body>
+      </html>
+      
